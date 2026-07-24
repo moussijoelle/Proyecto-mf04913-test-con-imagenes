@@ -166,20 +166,20 @@ const main = (operacion, entrada) => {
 
         if (pregunta.confirmada === true) {
           if (pregunta.opciones[i] === pregunta.correcta) {
-            botonesOpcion[i].className = "btn btn-primary btn-sm flex-1";
+            botonesOpcion[i].className = "btn btn-primary flex-1";
             iconosFeedback[i].innerHTML = obtenerHtmlIconoOk();
             iconosFeedback[i].style.display = "inline-flex";
           } else {
             if (pregunta.opciones[i] === pregunta.respuesta) {
-              botonesOpcion[i].className = "btn btn-error btn-sm flex-1";
+              botonesOpcion[i].className = "btn btn-error flex-1";
               iconosFeedback[i].innerHTML = obtenerHtmlIconoError();
               iconosFeedback[i].style.display = "inline-flex";
             } else {
-              botonesOpcion[i].className = "btn btn-primary btn-sm flex-1";
+              botonesOpcion[i].className = "btn btn-primary flex-1";
             }
           }
         } else {
-          botonesOpcion[i].className = "btn btn-primary btn-sm flex-1";
+          botonesOpcion[i].className = "btn btn-primary flex-1";
         }
 
         if (sePuedeResponder(pregunta, testTerminado)) {
