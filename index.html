@@ -12,7 +12,7 @@
 
 <body class="min-h-screen bg-base-200 text-base-content">
 
-  <header class="navbar bg-base-100 shadow-sm px-4">
+  <header class="navbar bg-base-100 shadow-sm px-4 sticky top-0 z-50">
     <div class="flex-1">
       <p class="font-semibold">Puntuación <span id="puntuacion">0</span> / 10</p>
     </div>
@@ -28,7 +28,7 @@
     </div>
   </header>
 
-  <main class="mx-auto max-w-6xl p-4 md:p-6 space-y-5">
+  <main class="mx-auto max-w-7xl p-4 md:px-8 md:py-5 space-y-4">
 
     <section>
       <h1 class="text-2xl md:text-3xl font-bold text-primary">
@@ -40,35 +40,38 @@
       </p>
     </section>
 
-    <section class="grid gap-4 md:gap-5 md:grid-cols-[1.7fr_1fr] md:items-start">
+    <section class="bg-base-100 rounded-box border border-base-300 shadow-sm p-3 md:p-5">
+      <div class="grid gap-4 md:gap-6 md:grid-cols-[1.65fr_1fr] md:items-stretch">
 
-      <div class="bg-base-100 rounded-box p-2 md:p-3 shadow overflow-hidden">
-        <img id="imagen-pregunta" src="" alt="Deporte olímpico" class="w-full rounded-box object-cover object-center min-h-[16rem] h-[min(52vh,30rem)]">
-      </div>
+        <div class="min-h-0">
+          <img id="imagen-pregunta" src="" alt="Deporte olímpico" class="w-full h-full min-h-[18rem] max-h-[min(58vh,34rem)] rounded-2xl object-cover object-center">
+        </div>
 
-      <div class="bg-base-100 rounded-box p-4 shadow space-y-3 self-start">
-        <h2 id="enunciado" class="text-lg md:text-xl font-bold">
-          ¿Cómo se llama este deporte en inglés?
-        </h2>
+        <div class="bg-base-100 rounded-2xl border border-base-200 shadow p-4 md:p-5 space-y-3 self-start md:self-center w-full">
+          <h2 id="enunciado" class="text-lg md:text-xl font-bold">
+            ¿Cómo se llama este deporte en inglés?
+          </h2>
 
-        <div id="opciones" class="flex flex-col gap-2">
-          <div class="flex items-center gap-2">
-            <button type="button" class="btn btn-primary flex-1" data-opcion="0">Opción A</button>
-            <span class="icono-feedback h-9 w-9 shrink-0" style="display:none;"></span>
-          </div>
-          <div class="flex items-center gap-2">
-            <button type="button" class="btn btn-primary flex-1" data-opcion="1">Opción B</button>
-            <span class="icono-feedback h-9 w-9 shrink-0" style="display:none;"></span>
-          </div>
-          <div class="flex items-center gap-2">
-            <button type="button" class="btn btn-primary flex-1" data-opcion="2">Opción C</button>
-            <span class="icono-feedback h-9 w-9 shrink-0" style="display:none;"></span>
-          </div>
-          <div class="flex items-center gap-2">
-            <button type="button" class="btn btn-primary flex-1" data-opcion="3">Opción D</button>
-            <span class="icono-feedback h-9 w-9 shrink-0" style="display:none;"></span>
+          <div id="opciones" class="flex flex-col gap-2.5">
+            <div class="flex items-center gap-2">
+              <button type="button" class="btn btn-primary flex-1" data-opcion="0">Opción A</button>
+              <span class="icono-feedback h-9 w-9 shrink-0" style="display:none;"></span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button type="button" class="btn btn-primary flex-1" data-opcion="1">Opción B</button>
+              <span class="icono-feedback h-9 w-9 shrink-0" style="display:none;"></span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button type="button" class="btn btn-primary flex-1" data-opcion="2">Opción C</button>
+              <span class="icono-feedback h-9 w-9 shrink-0" style="display:none;"></span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button type="button" class="btn btn-primary flex-1" data-opcion="3">Opción D</button>
+              <span class="icono-feedback h-9 w-9 shrink-0" style="display:none;"></span>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
 
