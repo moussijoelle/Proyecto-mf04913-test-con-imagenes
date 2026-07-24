@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="winter">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deportes olímpicos — ¿Los reconoces… en otro idioma? EN / FR</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5.5.19/daisyui.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5.5.19/themes.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen bg-base-200 text-base-content">
+
+  <header class="navbar bg-base-100 shadow-sm px-4">
+    <div class="flex-1">
+      <p class="font-semibold">Puntuación <span id="puntuacion">0</span> / 10</p>
+    </div>
+
+    <div class="flex-none flex items-center gap-2">
+      <button type="button" id="btn-anterior" class="btn btn-ghost btn-sm">&lt;</button>
+      <span id="contador">1 / 10</span>
+      <button type="button" id="btn-siguiente" class="btn btn-ghost btn-sm">&gt;</button>
+    </div>
+
+    <div class="flex-none ml-2">
+      <button type="button" id="btn-terminar" class="btn btn-primary btn-sm">Terminar</button>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-5xl p-4 space-y-4">
+
+    <section>
+      <h1 class="text-2xl font-bold text-primary">
+        Deportes olímpicos — ¿Los reconoces… en otro idioma?
+      </h1>
+      <p class="mt-1 text-sm opacity-80">
+        Mira la imagen y elige el nombre del deporte. Hay preguntas en inglés y en francés.
+        Confirma tu respuesta para ver la explicación.
+      </p>
+    </section>
+
+    <section class="grid gap-4 md:grid-cols-[1.6fr_1fr]">
+
+      <div class="bg-base-100 rounded-box p-3 shadow">
+        <img id="imagen-pregunta" src="" alt="Deporte olímpico" class="w-full rounded-box object-cover max-h-80">
+      </div>
+
+      <div class="bg-base-100 rounded-box p-3 shadow space-y-2 self-start">
+        <h2 id="enunciado" class="text-lg font-bold">
+          ¿Cómo se llama este deporte en inglés?
+        </h2>
+
+        <div id="opciones" class="flex flex-col gap-1.5">
+          <div class="flex items-center gap-2">
+            <button type="button" class="btn btn-primary btn-sm flex-1" data-opcion="0">Opción A</button>
+            <span class="icono-feedback h-9 w-9 shrink-0" style="display:none;"></span>
+          </div>
+          <div class="flex items-center gap-2">
+            <button type="button" class="btn btn-primary btn-sm flex-1" data-opcion="1">Opción B</button>
+            <span class="icono-feedback h-9 w-9 shrink-0" style="display:none;"></span>
+          </div>
+          <div class="flex items-center gap-2">
+            <button type="button" class="btn btn-primary btn-sm flex-1" data-opcion="2">Opción C</button>
+            <span class="icono-feedback h-9 w-9 shrink-0" style="display:none;"></span>
+          </div>
+          <div class="flex items-center gap-2">
+            <button type="button" class="btn btn-primary btn-sm flex-1" data-opcion="3">Opción D</button>
+            <span class="icono-feedback h-9 w-9 shrink-0" style="display:none;"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="explicacion" class="bg-base-100 rounded-box p-4 shadow hidden">
+      <h2 id="titulo-explicacion" class="text-lg font-bold text-primary"></h2>
+      <p id="texto-explicacion" class="mt-2"></p>
+    </section>
+
+  </main>
+
+  <dialog id="dialog-confirmar" class="modal">
+    <div class="modal-box">
+      <h3 class="font-bold text-lg">¿Confirmas tu respuesta?</h3>
+      <p class="py-2">Si confirmas, no podrás cambiarla.</p>
+      <div class="modal-action">
+        <button type="button" id="btn-no-confirmar" class="btn">No</button>
+        <button type="button" id="btn-si-confirmar" class="btn btn-primary">Sí</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="dialog-email" class="modal">
+    <div class="modal-box">
+      <form id="form-email">
+        <label class="form-control w-full">
+          <span class="label-text mb-2">Indica tu mail para enviar los resultados:</span>
+          <input type="email" id="input-email" required class="input input-bordered w-full" placeholder="tu@email.com">
+        </label>
+        <div class="modal-action">
+          <button type="submit" id="btn-enviar" class="btn btn-primary">Enviar</button>
+        </div>
+      </form>
+      <p id="mensaje-envio" class="mt-3 hidden"></p>
+      <form id="form-cerrar-email" method="dialog" class="modal-action hidden">
+        <button type="submit" class="btn btn-primary">Aceptar</button>
+      </form>
+    </div>
+  </dialog>
+
+  <script src="js/datos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
