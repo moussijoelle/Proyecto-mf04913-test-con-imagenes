@@ -1,13 +1,13 @@
-﻿# Deportes olímpicos — test con imágenes (MF0491_3)
+# Deportes olímpicos — test con imágenes
 
-Quiz de 10 preguntas: ves la imagen de un deporte y eliges el nombre en inglés o francés.
+Quiz de 10 preguntas (MF0491_3): ves la imagen y eliges el nombre del deporte en inglés o francés.
 
 ## Qué hace
 
-- 10 preguntas con imagen
+- 10 preguntas con foto
 - Puntuación en vivo
-- Navegación anterior / siguiente y botón terminar
-- Confirma la respuesta y muestra explicación
+- Anterior / siguiente y “Terminar”
+- Tras confirmar, muestra explicación
 
 ## Cómo probarlo
 
@@ -17,12 +17,11 @@ Demo: https://moussijoelle.github.io/Proyecto-mf04913-test-con-imagenes/
 
 ## Cómo lo construí
 
-- HTML + JavaScript (`js/`) + Tailwind / DaisyUI (CDN)
-- Imágenes en `img/`
+HTML + JS en `js/` + Tailwind/DaisyUI por CDN. Imágenes en `img/`.
 
 ## Cómo verificarlo
 
-Sin tests. Completo el test, miro la puntuación y las explicaciones.
+Hago el test entero (o al menos 4–5 preguntas), miro puntuación y explicaciones.
 
 ---
 
